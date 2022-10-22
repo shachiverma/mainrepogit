@@ -1,0 +1,52 @@
+pipeline {
+agent any
+
+tools{
+maven "MAVEN_HOME"
+}
+
+
+
+stages {
+
+stage("Checkout code"){
+steps
+{
+checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: '745f520e-bb1c-42d1-b4df-4c632c2ac565', url: 'https://git.nagarro.com/GITG00641/Java/shachi-verma.git']]])
+echo 'Check Out'
+}
+}
+stage('Clean') {
+steps {
+bat 'mvn -f Week_9_Assignment/Week_9_Assignment/pom.xml clean'
+echo 'Cleaning..'
+}
+}
+stage('Compile') {
+steps {
+bat 'mvn -f Week_9_Assignment/Week_9_Assignment/pom.xml compile'
+echo 'Compiling..'
+}
+}
+stage('Test') {
+steps {
+bat 'mvn -f Week_9_Assignment/Week_9_Assignment/pom.xml test'
+echo 'Testing..'
+}
+}
+stage('Packaging') {
+steps {
+bat 'mvn -f Week_9_Assignment/Week_9_Assignment/pom.xml package'
+echo 'Packageing..'
+}
+}
+stage('Install') {
+steps {
+bat 'mvn -f Week_9_Assignment/Week_9_Assignment/pom.xml install'
+echo 'Installing..'
+}
+}
+
+
+}
+}
