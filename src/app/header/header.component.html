@@ -1,0 +1,25 @@
+<!-- src/app/header/header.component.html -->
+
+<div class="navbar" *ngIf="menuType === 'default'" >
+  <div class="logo">Bon Appétit</div>
+  <div class="nav-options" >
+    <a routerLink="/">Home</a>
+    <a routerLink="/cart">Cart</a>
+    <a routerLink="/user-auth">Login</a>
+  </div>
+</div>
+
+<!-- ************************* -->
+
+<div class="navbar" *ngIf="menuType === 'user'">
+  <div class="logo">Bon Appétit</div>
+  <div class="nav-options" >
+    <a routerLink="/">Home</a>
+    <a routerLink="/cart">Cart</a>
+    <a (click)="logout()">Logout</a>
+    <a href="#">{{userName | titlecase}}</a>
+  </div>
+</div>
+
+
+

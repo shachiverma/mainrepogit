@@ -1,0 +1,109 @@
+<!-- 
+<h2>Your Cart</h2>
+
+<div *ngIf="cartItems.length > 0; else emptyCart">
+  <div *ngFor="let item of cartItems" class="cart-item">
+    <div class="cart-item-details">
+      <img [src]="item.imageUrl" alt="{{ item.name }} Image" class="cart-item-image">
+      <div class="cart-item-info">
+        <h4>{{ item.name }}</h4>
+        <p>Price: ${{ item.price }}</p>
+        <div class="quantity-controls">
+          <button (click)="decreaseQuantity(item)">-</button>
+          <span>{{ item.quantity }}</span>
+          <button (click)="increaseQuantity(item)">+</button>
+        </div>
+      </div>
+    </div>
+    <div class="cart-item-controls">
+      <button class="remove-button" (click)="removeItem(item)" class="remove-button">Remove</button>
+    </div>
+    <div class="cart-item-total">
+      <p>Total: ${{ item.price * item.quantity }}</p>
+    </div>
+  </div>
+  <p class="total-price">Total Price: ${{ getTotalPrice() }}</p>
+  <button class="checkout-button" (click)="checkout()">Checkout</button>
+</div>
+
+<ng-template #emptyCart>
+  <p>Your cart is empty.</p>
+</ng-template> -->
+
+<!-- **************************************************************** -->
+<!-- <h2>Your Cart</h2>
+
+<div *ngIf="cartItems.length > 0; else emptyCart">
+  <div *ngFor="let item of cartItems">
+    <div class="cart-item">
+      
+      <div class="cart-item-details">
+        <img [src]="item.imageUrl" alt="{{ item.name }} Image" class="cart-item-image">
+        <div class="cart-item-info">
+          <h4>{{ item.name }}</h4>
+          <p>Price: ${{ item.price }}</p>
+          <div class="quantity-controls">
+            <button (click)="decreaseQuantity(item)">-</button>
+            <span>{{ item.quantity }}</span>
+            <button (click)="increaseQuantity(item)">+</button>
+          </div>
+        </div>
+        <button class="remove-button" (click)="removeItem(item)">Remove</button>
+      </div>
+      <div class="cart-item-total">
+        <p>Total: ${{ item.price * item.quantity }}</p>
+      </div>
+    </div>
+  </div>
+  <p class="total-price">Total Price: ${{ getTotalPrice() }}</p>
+  <button class="checkout-button" (click)="checkout()">Checkout</button>
+</div>
+
+<ng-template #emptyCart>
+  <p>Your cart is empty.</p>
+</ng-template> -->
+<!-- ------------------------------------------------------- -->
+
+<h1>
+  Cart Page
+</h1>
+<div class="cart-page"  *ngIf="cartItems.length > 0; else emptyCart">
+  
+  <div class="row">
+  <div class="col-sm-8 details">
+      <ul *ngFor="let item of cartItems">
+          <li>
+              <img [src]="item.imageUrl" alt="" class="cart-item-image">
+          </li>
+          <li>
+              <span> {{item.name}}</span>
+          </li>
+          <li>
+              <span> Price : ${{item.price}}</span>
+          </li>
+          <li>
+            <div class="quantity-controls">
+              <button (click)="decreaseQuantity(item)">-</button>
+              <span>{{ item.quantity }}</span>
+              <button (click)="increaseQuantity(item)">+</button>
+            </div>
+          </li>
+          <li >
+             <button class="remove-button" (click)="removeItem(item)" >Remove</button>
+          </li>
+      </ul>
+      
+  </div>
+  <div class="col-sm-4 summary">
+  <h3>Summary</h3>
+  <ul>
+      <li> <span><h4>Total:</h4></span> <span><h4>${{ getTotalPrice() }}</h4></span></li>
+      <button (click)="checkout()" class="checkout-button" >Checkout</button>
+  </ul>
+  </div>
+  </div>
+  </div>
+  <ng-template #emptyCart>
+    <p>Your cart is empty.</p>
+  </ng-template> 
+

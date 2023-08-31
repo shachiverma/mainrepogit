@@ -1,27 +1,56 @@
-# ResApp
+# ResApp - Food Delivery App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
+ResApp is a food delivery application that allows users to browse various restaurants, explore menus, and place food orders. It provides features for user authentication, restaurant selection, menu browsing, and order management.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- User Authentication: Users can sign up and log in to the app to access its features.
+- Restaurant Selection: Browse through a list of restaurants available on the platform.
+- Menu Exploration: View the menus of selected restaurants, including available food items and prices.
+- Cart Management: Add items to the cart while exploring menus.
+- Order Checkout: Proceed to checkout, review the order, and place it.
+- Order History: Users can view their past order history.
+- Logout: Users can log out from their accounts.
 
-## Code scaffolding
+## Components
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The app is structured into the following components:
 
-## Build
+- `cart`: Manages the items added by the user to their cart.
+- `checkout`: Handles the order checkout process.
+- `header`: Displays the app header with navigation and user information.
+- `my-orders`: Displays the user's order history.
+- `restaurant-list`: Lists available restaurants for users to choose from.
+- `restaurant-menu`: Displays the menu of a selected restaurant.
+- `user-auth`: Manages user authentication and account-related actions.
+- `services`: Contains services for API communication and data management.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Getting Started
 
-## Running unit tests
+1. Clone the repository: `git clone https://github.com/yourusername/ResApp.git`
+2. Navigate to the project directory: `cd ResApp`
+3. Install dependencies: `npm install bootstrap`
+4. Start the JSON server for simulating API calls: `json-server --watch db.json`
+5. Start the development server: `ng serve -o`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Technologies Used
 
-## Running end-to-end tests
+- Angular: Frontend user interface development.
+- JSON Server: Simulating a backend server for API calls and data management.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Screenshots
+![Restaurant List](assets/screenshots/Screenshot(17).png)
 
-## Further help
+![Login/SignUp](assets/screenshots/Screenshot(16).png)
+![Login/SignUp](assets/screenshots/Screenshot(15).png)
+![Login/SignUp](assets/screenshots/Screenshot(14).png)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![Cart](assets/screenshots/Screenshot(18).png)
+
+![Checkout](assets/screenshots/Screenshot(24).png)
+![Checkout](assets/screenshots/Screenshot(20).png)
+
+![Order History](assets/screenshots/Screenshot(23).png)
+
+
+

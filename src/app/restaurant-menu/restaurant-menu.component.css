@@ -1,0 +1,154 @@
+/* src/app/restaurant-menu/restaurant-menu.component.css */
+
+.restaurant-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.restaurant-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.restaurant-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.restaurant-image {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.restaurant-metadata {
+  display: flex;
+  flex-direction: column;
+}
+
+.restaurant-rating{
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.restaurant-cuisine {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.restaurant-description {
+  margin-top: 20px;
+  font-size: 20px;
+  text-align: left;
+}
+
+/* ********************************* */
+src/app/restaurant-menu/restaurant-menu.component.css
+
+/* .restaurant-image {
+  max-width: 210px; 
+  height: auto;
+  border-radius: 5px;
+  margin: 20px 0;
+} */
+
+.menu-items {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.menu-item-image {
+  /* max-width: 150px; Adjust image size as needed */
+  width: 150px;
+  height: 120px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.menu-item-details {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-item-name-price {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  margin-right: 700px;
+}
+
+.menu-item-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.menu-item-price {
+  color: #777;
+}
+
+.menu-item-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* .quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+ .quantity-controls button {
+  background-color: #071a2e;
+  border: none;
+  cursor: pointer;
+   padding: 2px 5px; 
+  padding: 10px;
+  border-radius: 3px;
+  color: white;
+} 
+
+/* .quantity-controls span {
+  font-weight: bold;
+} 
+.quantity-controls input {
+  width: 50px;
+  padding: 10px;
+} */
+.addtocart{
+  background-color: #071a2e;
+  color: white;
+  border: 2px solid #071a2e ;
+  font-size: 10px;
+  padding: 10px;
+  
+}
+
+.address {
+
+  margin-bottom: 10px;
+  font-weight: bold; 
+}
+.contact{
+
+  margin-bottom: 10px;
+  font-weight: bold;
+
+}

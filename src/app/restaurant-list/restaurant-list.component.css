@@ -1,0 +1,66 @@
+/* src/app/restaurant-list/restaurant-list.component.css */
+
+.restaurant-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.restaurant-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  width: calc(33.33% - 20px); /* Three items per row */
+  box-sizing: border-box;
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.restaurant-card:hover {
+  transform: scale(1.05);
+}
+
+.restaurant-image img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.restaurant-info {
+  padding: 10px;
+}
+
+.restaurant-name {
+  margin: 0;
+  font-size: 20px;
+}
+
+.restaurant-description {
+  margin: 5px 0;
+  color: #555;
+}
+
+.restaurant-rating {
+  color: rgb(9, 107, 150);
+  font-size: 14px;
+}
+.menu-link {
+  text-decoration: none; 
+  color: #071a2e; 
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 120px;
+}
+
+.menu-link:hover {
+  text-decoration: none; /* Remove underline on hover */
+}
+.restaurant-list {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+

@@ -1,0 +1,20 @@
+
+<!-- src/app/restaurant-list/restaurant-list.component.html -->
+
+<div class="restaurant-list">
+  <div class="restaurant-card" *ngFor="let restaurant of restaurants">
+    <div class="restaurant-image">
+      <img [src]="restaurant.imageUrl" alt="{{ restaurant.name }} Image">
+    </div>
+    <div class="restaurant-info">
+      <h3 class="restaurant-name">{{ restaurant.name }}</h3>
+      <!-- <p class="restaurant-description">{{ restaurant.description }}</p> -->
+      <div class="restaurant-rating">Rating: {{ restaurant.rating }}</div>
+      <div class="restaurant-deliverytime">🕕: {{ restaurant.deliverytime }}</div>
+      <a [routerLink]="['/menu', restaurant.id]" class="menu-link">View Menu</a>
+    </div>
+  </div>
+</div>
+
+
+

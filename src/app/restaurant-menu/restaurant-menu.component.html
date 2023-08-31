@@ -1,0 +1,111 @@
+<!-- 
+<div *ngIf="restaurant">
+  <h2>{{ restaurant.name }}</h2>
+  
+  <div class="restaurant-details">
+      <div class="col-sm-6">
+        <img [src]="restaurant.imageUrl" alt="{{ restaurant.name }} Image" class="restaurant-image">
+      </div>
+      <div class="col-sm-6">
+        <div class="restaurant-details">
+          <p class="restaurant-description">{{ restaurant.description }}</p>
+        </div>
+        <div class="restaurant-metadata">
+          <div class="restaurant-rating">Rating: {{ restaurant.rating }}/5</div>
+          <div class="restaurant-cuisine">Cuisine: {{ restaurant.cuisine }}</div>
+          <div class="address">Address:{{ restaurant.address }}</div>
+          <div class="contact">Phone: {{ restaurant.phone }}</div>
+        </div>
+      </div>  
+  </div>
+  <h3>Menu</h3>
+  <ul class="menu-items">
+    <li *ngFor="let item of restaurant.menu" class="menu-item">
+      <div class="menu-item-details">
+        <img [src]="item.imageUrl" alt="{{ item.name }} Image" class="menu-item-image">
+        <div class="menu-item-name-price">
+          <div class="menu-item-name">{{ item.name }}</div>
+          <div class="menu-item-price">${{ item.price }}</div>
+        </div>
+      </div>
+      <div class="menu-item-controls">
+        <button (click)="addToCart(item)" class="addtocart">Add to Cart</button>
+      </div>
+    </li>
+  </ul>
+</div> -->
+
+
+<!-- **************************************************************************** -->
+<div class="container" *ngIf="restaurant">
+  <h2>{{ restaurant.name }}</h2>
+
+  <div class="row restaurant-details">
+    <div class="col-sm-6">
+      <img [src]="restaurant.imageUrl" alt="{{ restaurant.name }} Image" class="img-fluid restaurant-image">
+    </div>
+    <div class="col-sm-6">
+      <div class="restaurant-details">
+        <p class="restaurant-description">{{ restaurant.description }}</p>
+      </div>
+      <div class="restaurant-metadata">
+        <div class="restaurant-rating">Rating: {{ restaurant.rating }}/5</div>
+        <div class="restaurant-cuisine">Cuisine: {{ restaurant.cuisine }}</div>
+        <div class="address">Address: {{ restaurant.address }}</div>
+        <div class="contact">Phone: {{ restaurant.phone }}</div>
+      </div>
+    </div>
+  </div>
+
+  <h3>Menu</h3>
+  <ul class="list-group menu-items">
+    <li *ngFor="let item of restaurant.menu" class="list-group-item menu-item">
+      <div class="d-flex justify-content-between">
+        <div class="menu-item-details">
+          <img [src]="item.imageUrl" alt="{{ item.name }} Image" class="img-fluid menu-item-image">
+          <div class="menu-item-name-price">
+            <div class="menu-item-name">{{ item.name }}</div>
+            <div class="menu-item-price">${{ item.price }}</div>
+          </div>
+        </div>
+        <div class="menu-item-controls align-self-center">
+          <button (click)="addToCart(item)" class=" addtocart">Add to Cart</button>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<!-- <div class="container">
+  <h3>Menu</h3>
+  <ul class="list-group menu-items">
+    <li *ngFor="let item of restaurant.menu" class="list-group-item menu-item">
+      <div class="d-flex justify-content-between">
+        <div class="menu-item-details">
+          <img [src]="item.imageUrl" alt="{{ item.name }} Image" class="img-fluid menu-item-image">
+          <div class="menu-item-name-price">
+            <div class="menu-item-name">{{ item.name }}</div>
+            <div class="menu-item-price">${{ item.price }}</div>
+          </div>
+        </div>
+        <div class="menu-item-controls align-self-center">
+          <button (click)="addToCart(item)" class="btn btn-primary addtocart">Add to Cart</button>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div> -->
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+  
